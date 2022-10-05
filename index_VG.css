@@ -1,3 +1,78 @@
-body {
-    background-image: url(weezer-3.jpg);
+@font-face {
+    font-family: Coiny;
+    src: url(Fonts/Coiny-Cyrillic.ttf);
 }
+
+@font-face {
+    font-family: Louis;
+    src: url(Fonts/louis_george_caf/Louis\ George\ Cafe.ttf);
+}
+
+@font-face {
+    font-family: Bungee Shade;
+    src: url(Fonts/Bungee_Shade/BungeeShade-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+
+    /* background image*/
+    background-image: url(Images/weezer-3.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    padding: 5vw 3vw 3vw 3vw;
+    background-attachment: fixed;
+}
+
+.container-1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 40px;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 0px 20px 0px 20px;
+}
+
+header {
+    font-family: Bungee Shade;
+    font-size: 5vw;
+    color: rgb(217, 217, 217);
+    padding: 0;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    font-family: Louis;
+    justify-self: center;
+    gap: 5px;
+}
+
+.nav {
+    background-color: rgba(203, 203, 203, 0.8);
+    padding: 17px;
+    font-size: 1.8vw;
+    color: rgb(100, 100, 100);
+    border-radius: 10px;
+}
+
+.marked {
+    box-shadow: 0px 0px 10px 0px white;
+    border: 3px solid rgba(227, 227, 227, 0.5);
+    color: black;
+    font-weight: bold;
+}
+
+.nav:hover:not(.marked) {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(227, 227, 227, 0.8);
+}
+
+.album_data {}
