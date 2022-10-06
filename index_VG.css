@@ -1,9 +1,4 @@
 @font-face {
-    font-family: Coiny;
-    src: url(Fonts/Coiny-Cyrillic.ttf);
-}
-
-@font-face {
     font-family: Louis;
     src: url(Fonts/louis_george_caf/Louis\ George\ Cafe.ttf);
 }
@@ -13,11 +8,17 @@
     src: url(Fonts/Bungee_Shade/BungeeShade-Regular.ttf);
 }
 
+@font-face {
+    font-family: Piximisa;
+    src: url(Fonts/Piximisa.ttf);
+}
+
 body {
     margin: 0;
     height: 100vh;
     width: 100vw;
-
+    font-family: Louis;
+    color: rgb(217, 217, 217);
     /* background image*/
     background-image: url(Images/weezer-3.jpg);
     height: 100vh;
@@ -33,7 +34,6 @@ body {
 .container-1 {
     background-color: rgba(0, 0, 0, 0.5);
     margin: 40px;
-    height: 100%;
     box-sizing: border-box;
     border-radius: 20px;
     padding: 0px 20px 0px 20px;
@@ -43,16 +43,16 @@ header {
     font-family: Bungee Shade;
     font-size: 5vw;
     color: rgb(217, 217, 217);
-    padding: 0;
+
 }
 
 nav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     text-align: center;
-    font-family: Louis;
     justify-self: center;
     gap: 5px;
+    margin-bottom: 70px;
 }
 
 .nav {
@@ -75,4 +75,30 @@ nav {
     color: rgba(227, 227, 227, 0.8);
 }
 
-.album_data {}
+article {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    border: 3px solid rgba(227, 227, 227, 0.4);
+    padding: 10px;
+}
+
+.h1-spring {
+    font-family: Piximisa;
+    font-weight: bold;
+    font-size: 5vw;
+    color: rgba(217, 217, 217, 0.7);
+    margin: 0;
+}
+
+.h2-spring {
+    font-family: Louis;
+    font-size: 2.4vw;
+    color: rgb(246, 246, 246);
+    margin: 0;
+}
+
+
+#summer {
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
