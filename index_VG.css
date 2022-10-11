@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Louis;
-    src: url(Fonts/louis_george_caf/Louis\ George\ Cafe.ttf);
+    font-family: Barlow;
+    src: url(Fonts/Barlow/Barlow-Medium.ttf);
 }
 
 @font-face {
@@ -13,12 +13,18 @@
     src: url(Fonts/Piximisa.ttf);
 }
 
+* {
+    margin: 0;
+}
+
 body {
     margin: 0;
     height: 100vh;
     width: 100vw;
-    font-family: Louis;
-    color: rgb(217, 217, 217);
+    font-family: Barlow;
+    font-size: 1.5vw;
+    color: rgb(217, 217, 217, 0.8);
+
     /* background image*/
     background-image: url(Images/weezer-3.jpg);
     height: 100vh;
@@ -27,7 +33,7 @@ body {
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
-    padding: 5vw 3vw 3vw 3vw;
+    padding: 5vw 1vw 3vw 1vw;
     background-attachment: fixed;
 }
 
@@ -36,7 +42,7 @@ body {
     margin: 40px;
     box-sizing: border-box;
     border-radius: 20px;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 20px;
 }
 
 header {
@@ -46,19 +52,22 @@ header {
 
 }
 
+/*nav*/
+
 nav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     text-align: center;
     justify-self: center;
     gap: 5px;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
+    margin-top: 50px;
 }
 
 .nav {
     background-color: rgba(203, 203, 203, 0.8);
     padding: 17px;
-    font-size: 1.8vw;
+    font-size: 2vw;
     color: rgb(100, 100, 100);
     border-radius: 10px;
 }
@@ -75,30 +84,250 @@ nav {
     color: rgba(227, 227, 227, 0.8);
 }
 
+/*Spring*/
+
 article {
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     border: 3px solid rgba(227, 227, 227, 0.4);
-    padding: 10px;
+    padding: 15px;
 }
 
-.h1-spring {
+/* positioning */
+#spring {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 2fr auto 1.1fr;
+    gap: 0.3vh;
+}
+
+.album_data {
+    grid-row: 1;
+    margin-right: 1vh;
+    margin-bottom: -20px;
+}
+
+/* cover */
+.cover,
+.song_list {
+    grid-column: 2;
+}
+
+.cover {
+    margin-bottom: -20px;
+}
+
+.cover img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.show_hover,
+.cover:hover .show_not_hover {
+    display: none;
+}
+
+.cover:hover .show_hover {
+    display: initial;
+}
+
+.show_hover,
+.show_not_hover {
+    border-radius: 20px 20px 0 0;
+}
+
+/* tracks */
+.song_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vh;
+}
+
+.tracks-box-1 {
+    background-color: rgb(13, 88, 13);
+    padding: 2vh;
+    border-radius: 0 0 0 20px;
+    font-size: 0.7rem;
+}
+
+.tracks-box-2 {
+    background-color: rgb(13, 88, 13);
+    border-radius: 0 0 20px 0;
+    padding: 2vh;
+    padding-top: 3vh;
+    font-size: 0.7rem;
+    counter-reset: ? 4;
+    /* fixa detta!! */
+}
+
+/* anecdotes */
+.anecdotes-spring {
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    margin-top: 0.8vh;
+    margin-bottom: -1vh;
+    gap: 0.7vh;
+    list-style: none;
+    padding: 0;
+}
+
+.top_right_90 {
+    background-color: rgb(13, 88, 13);
+    ;
+    border-radius: 20px 0 20px 20px;
+    padding: 2vh;
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+}
+
+.two_wide_bottom_left_90 {
+    background-color: rgb(13, 88, 13);
+    border-radius: 20px 20px 20px 0;
+    padding: 2vh;
+    grid-column: 3/4;
+    display: flex;
+    align-items: center;
+}
+
+.top_left_90 {
+    border-radius: 0 20px 20px 20px;
+    padding: 2vh;
+    grid-column: 4/5;
+    grid-row: 1;
+}
+
+.brian_bell {
+    background-image: url(Images/weezer-green.jpg);
+    background-size: cover;
+    background-position: 70% 50%;
+    font-weight: bold;
+    text-shadow: 0 0 0.5vh #003402;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.bottom_right_90 {
+    background-color: rgb(13, 88, 13);
+    border-radius: 20px 20px 0 20px;
+    padding: 2vh;
+    grid-column: 5/6;
+    grid-row: 1;
+    display: flex;
+    align-items: flex-end;
+    align-items: center;
+}
+
+/* some styling */
+.h1 {
     font-family: Piximisa;
     font-weight: bold;
     font-size: 5vw;
-    color: rgba(217, 217, 217, 0.7);
+    color: rgba(249, 249, 249, 0.7);
     margin: 0;
 }
 
 .h2-spring {
-    font-family: Louis;
     font-size: 2.4vw;
-    color: rgb(246, 246, 246);
+    color: rgb(76, 148, 66);
     margin: 0;
+    margin-bottom: 40px;
 }
 
+.musicians {
+    margin-bottom: 30px;
+}
 
+li :not(h2>*) {
+    list-style: none;
+}
+
+.tracks {
+    list-style: decimal;
+    padding-left: 16px;
+    white-space: nowrap;
+}
+
+/* summer */
 #summer {
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 2fr auto 1.1fr;
+    gap: 0.3vh;
+}
+
+.h2-summer {
+    font-family: Louis;
+    font-size: 2.4vw;
+    color: rgb(176, 85, 52);
+    margin-bottom: 50px;
+}
+
+.song_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vh;
+}
+
+.tracks-box-3 {
+    background-color: rgb(124, 52, 26);
+    padding: 2vh;
+    border-radius: 0 0 0 20px;
+    font-size: 1.3vw;
+}
+
+.tracks-box-4 {
+    background-color: rgb(124, 52, 26);
+    border-radius: 0 0 20px 0;
+    padding: 2vh;
+    padding-top: 3vh;
+    font-size: 1.3vw;
+    counter-reset: ul 4;
+    /* fixa detta!! */
+}
+
+/* anecdotes */
+.anecdotes-summer {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    margin-top: 0.8vh;
+    margin-bottom: -1vh;
+    gap: 0.7vh;
+    list-style: none;
+    padding: 0;
+}
+
+.box-1 {
+    background-color: rgb(124, 52, 26);
+
+    grid-column: ;
+}
+
+.box-2 {
+    background-color: rgb(124, 52, 26);
+
+    grid-column: ;
+}
+
+.box-3 {
+    background-color: rgb(124, 52, 26);
+    grid-column: ;
+}
+
+.box-4 {
+    background-color: rgb(124, 52, 26);
+    border-radius: 20px 20px 0 20px;
+    padding: 2vh;
+    grid-column: ;
+    grid-row: ;
+}
+
+footer {
+    padding-bottom: 10px;
+    color: rgba(203, 203, 203, 0.8);
 }
