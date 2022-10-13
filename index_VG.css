@@ -22,7 +22,7 @@ body {
     height: 100vh;
     width: 100vw;
     font-family: Barlow;
-    font-size: 1.5vw;
+    font-size: 1.4vw;
     color: rgb(217, 217, 217, 0.8);
 
     /* background image*/
@@ -97,7 +97,7 @@ article {
 #spring {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 2fr auto 1.1fr;
+
     gap: 0.3vh;
 }
 
@@ -113,13 +113,10 @@ article {
     grid-column: 2;
 }
 
-.cover {
-    margin-bottom: -20px;
-}
-
 .cover img {
     width: 100%;
     object-fit: cover;
+
 }
 
 .show_hover,
@@ -147,7 +144,7 @@ article {
     background-color: rgb(13, 88, 13);
     padding: 2vh;
     border-radius: 0 0 0 20px;
-    font-size: 0.7rem;
+    font-size: 1.2vw;
 }
 
 .tracks-box-2 {
@@ -155,9 +152,7 @@ article {
     border-radius: 0 0 20px 0;
     padding: 2vh;
     padding-top: 3vh;
-    font-size: 0.7rem;
-    counter-reset: ? 4;
-    /* fixa detta!! */
+    font-size: 1.2vw;
 }
 
 /* anecdotes */
@@ -247,7 +242,6 @@ li :not(h2>*) {
 .tracks {
     list-style: decimal;
     padding-left: 16px;
-    white-space: nowrap;
 }
 
 /* summer */
@@ -256,12 +250,10 @@ li :not(h2>*) {
     margin-top: 20px;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 2fr auto 1.1fr;
     gap: 0.3vh;
 }
 
 .h2-summer {
-    font-family: Louis;
     font-size: 2.4vw;
     color: rgb(176, 85, 52);
     margin-bottom: 50px;
@@ -294,7 +286,8 @@ li :not(h2>*) {
 .anecdotes-summer {
     grid-column: 1 / 3;
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 1fr;
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+    grid-template-rows: 25vh;
     margin-top: 0.8vh;
     margin-bottom: -1vh;
     gap: 0.7vh;
@@ -304,14 +297,15 @@ li :not(h2>*) {
 
 .box-1 {
     background-color: rgb(124, 52, 26);
-
-    grid-column: ;
+    border-radius: 20px 20px 20px 0;
+    grid-column: 1;
+    padding: 2vh;
 }
 
 .box-2 {
     background-color: rgb(124, 52, 26);
-
-    grid-column: ;
+    grid-column: 2/3;
+    grid-row: 1;
 }
 
 .box-3 {
@@ -323,8 +317,8 @@ li :not(h2>*) {
     background-color: rgb(124, 52, 26);
     border-radius: 20px 20px 0 20px;
     padding: 2vh;
-    grid-column: ;
-    grid-row: ;
+    grid-column: 4/5;
+    grid-row: 1;
 }
 
 footer {
