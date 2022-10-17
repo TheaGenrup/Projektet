@@ -19,6 +19,7 @@
 
 body {
     margin: 0;
+    padding: 5vw 1vw 3vw 1vw;
     height: 100vh;
     width: 100vw;
     font-family: Barlow;
@@ -27,14 +28,13 @@ body {
 
     /* background image*/
     background-image: url(Images/weezer-3.jpg);
-    height: 100vh;
-    width: 100vw;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
-    padding: 5vw 1vw 3vw 1vw;
     background-attachment: fixed;
+
+    --main_font_size: 1.4vw;
 }
 
 .container-1 {
@@ -47,9 +47,8 @@ body {
 
 header {
     font-family: Bungee Shade;
-    font-size: 5vw;
+    font-size: calc(3.5 * var(--main_font_size));
     color: rgb(217, 217, 217);
-
 }
 
 /*nav*/
@@ -67,7 +66,7 @@ nav {
 .nav {
     background-color: rgba(203, 203, 203, 0.8);
     padding: 17px;
-    font-size: 2vw;
+    font-size: calc(1.4 * var(--main_font_size));
     color: rgb(100, 100, 100);
     border-radius: 10px;
 }
@@ -88,7 +87,7 @@ article {
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     border: 3px solid rgba(227, 227, 227, 0.4);
-    padding: 15px;
+    padding: 20px;
 }
 
 /*Spring*/
@@ -142,14 +141,14 @@ article {
     background-color: rgb(66, 111, 30);
     padding: 2vh;
     border-radius: 0 0 0 20px;
-    font-size: 1.2vw;
+    font-size: calc(0.9 * var(--main_font_size));
 }
 
 .tracks-box-2 {
     background-color: rgb(66, 111, 30);
     border-radius: 0 0 20px 0;
     padding: 2vh;
-    font-size: 1.2vw;
+    font-size: calc(0.9 * var(--main_font_size));
 }
 
 /* anecdotes */
@@ -195,6 +194,7 @@ article {
     background-position: 70% 50%;
     font-weight: bold;
     text-shadow: 0 0 0.5vh #003402;
+    color: white;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -215,15 +215,14 @@ article {
 .h1 {
     font-family: Piximisa;
     font-weight: bold;
-    font-size: 5vw;
+    font-size: calc(3.5 * var(--main_font_size));
     color: rgba(249, 249, 249, 0.7);
     margin: 0;
 }
 
 .h2-spring {
-    font-size: 2.4vw;
+    font-size: calc(1.6 * var(--main_font_size));
     color: rgb(66, 111, 30);
-    ;
     margin: 0;
     margin-bottom: 40px;
 }
@@ -238,7 +237,7 @@ li :not(h2>*) {
 
 .tracks {
     list-style: decimal;
-    padding-left: 16px;
+    padding-left: 22px;
 }
 
 /* summer */
@@ -251,14 +250,24 @@ li :not(h2>*) {
 }
 
 .h2-summer {
-    font-size: 2.4vw;
+    font-size: calc(1.6 * var(--main_font_size));
     color: rgb(117, 39, 50);
     margin-bottom: 50px;
 }
 
-/* tar bort prickarna från listorna med */
-article>div>:nth-child(2) ul {
+/* tar bort prickarna från listorna med musiker*/
+.album_data>div:nth-child(2) li {
     list-style-type: none;
+
+}
+
+.song_list:nth-child(2)>ul li {
+    list-style: decimal;
+    color: khaki;
+}
+
+article>div {
+    font-size: var(--main_font_size);
 }
 
 .song_list {
@@ -268,23 +277,19 @@ article>div>:nth-child(2) ul {
 }
 
 .tracks-box-3 {
-    color: #390614;
+    color: #2f0410;
     background-color: rgb(117, 39, 50);
     padding: 2vh;
     border-radius: 0 0 0 20px;
-    font-size: 1.3vw;
-    list-style: decimal;
-    padding-left: 16px;
+    font-size: calc(0.9 * var(--main_font_size));
 }
 
 .tracks-box-4 {
-    color: #390614;
+    color: #2f0410;
     background-color: rgb(117, 39, 50);
     padding: 2vh;
     border-radius: 0 0 20px 0;
-    font-size: 1.3vw;
-    list-style: decimal;
-    padding-left: 16px;
+    font-size: calc(0.9 * var(--main_font_size));
 }
 
 /* anecdotes */
@@ -304,7 +309,7 @@ article>div>:nth-child(2) ul {
 .anecdotes-summer>li {
     display: flex;
     align-items: center;
-    color: #390614;
+    color: #2f0410;
     background-color: rgb(117, 39, 50);
 }
 
@@ -337,4 +342,103 @@ article>div>:nth-child(2) ul {
 footer {
     padding-bottom: 10px;
     color: rgba(203, 203, 203, 0.8);
+}
+
+
+/* Media Queries */
+
+/* här ska texten sluta bli mindre */
+@media (max-width: 900px) {
+    body {
+        font-size: min(var(--main_font_size));
+    }
+}
+
+/* tablet */
+@media (max-width: 800px) {
+
+    #spring {
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+
+    .album_data {
+        grid-column: 1/3;
+        grid-row: 3;
+    }
+
+    .cover {
+        grid-column: 1;
+    }
+
+    .show_not_hover {
+        border-radius: 20px 0 0 20px;
+    }
+
+    .cover:first-child {
+        display: none;
+    }
+
+    .show_hover {}
+
+    .show_hover,
+    .cover:hover .show_not_hover {
+        display: initial;
+    }
+
+    .song_list {
+        grid-column: 2/3;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .song_list>div:first-child {
+        border-radius: 0 20px 0 0;
+    }
+
+    .anecdotes-spring {
+        grid-column: 1/3;
+        grid-row: 4;
+        margin-top: 20px;
+    }
+}
+
+
+/* phone */
+@media (max-width: 500px) {
+    body {
+        padding: 0;
+    }
+
+    .container-1 {
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+        border-radius: 0;
+    }
+
+    .nav {
+        padding: 13px;
+        font-size: calc(1.7 * var(--main_font_size));
+    }
+
+    #spring {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    header h1 {
+        ur text-align: center;
+        padding-top: 30px;
+        font-size: calc(10 * var(--main_font_size));
+    }
+
+    .album_data {
+        grid-column: 1/3;
+        grid-template-rows: ;
+    }
 }
